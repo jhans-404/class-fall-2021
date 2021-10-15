@@ -18,5 +18,6 @@ public class RandomGroup {
       // output choice
       System.out.println("Group number " + randomChoice + " has been chosen!");
 
+      s.close();
     }// end main method
 }// end class
