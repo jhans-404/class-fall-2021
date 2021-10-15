@@ -11,11 +11,12 @@ public class RandomGroup {
       System.out.println("How many groups?");
       int numGroups = s.nextInt();
       // System.out.println(numGroups);
-      
+
       // determine random group number
+      int randomChoice = (int)(Math.random()*numGroups + 1);
 
       // output choice
-
+      System.out.println("Group number " + randomChoice + " has been chosen!");
 
     }// end main method
 }// end class
