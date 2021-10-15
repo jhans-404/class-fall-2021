@@ -6,9 +6,11 @@ void setup() {
 
 
 void draw() {
-  // carV1();
   background(100);
-  carV2();
+  
+  carV1();
+  // carV2();
+  
 } // end draw method
 
 void carV1() {
@@ -23,6 +25,8 @@ void carV1() {
    triangle(width/2 - 150, height/2 - 50, width/2 - 75, height/2 - 50, width/2 - 75, height/2 - 100);
    triangle(width/2 + 150, height/2 - 50, width/2 + 75, height/2 - 50, width/2 + 75, height/2 - 100);
    rect(width/2, height/2 - 75, 150, 50);
+   
+   line(275, 460, 325, 460);
    
 } // end carV1 method
 
