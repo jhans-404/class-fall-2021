@@ -18,7 +18,16 @@ public class Username {
       String birthday = s.nextLine();
 
       // generate a username for that person based on their data
-      System.out.println(fName + " " + lName + " " + birthday);
+      String username = "";
+
+      // only the first letter of the first name
+      username += fName.substring(0, 1);
+
+      // final two letter of the last name (depends on how long the name is)
+      username += lName.substring(lName.length() - 2);
+
+      System.out.println("Here's your username, write it down because there's no way of getting it again.");
+      System.out.println(username);
 
   } // end main method
 
