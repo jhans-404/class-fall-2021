@@ -49,6 +49,7 @@ public class Username {
       System.out.println("───▐██──▀▀──▀▀──██▌───");
       System.out.println("──▄████▄──▐▌──▄████▄──");
 
+      s.close();
   } // end main method
 
 } // end class
