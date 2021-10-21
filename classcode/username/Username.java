@@ -23,11 +23,31 @@ public class Username {
       // only the first letter of the first name
       username += fName.substring(0, 1);
 
-      // final two letter of the last name (depends on how long the name is)
+      // final two letters of the last name (depends on how long the name is)
       username += lName.substring(lName.length() - 2);
+
+      // grab the month of birth (must be 2 characters)
+      if (birthday.indexOf("/") == 2) {
+        username += birthday.substring(0, 2);
+      } else {
+        username += "0";
+        username += birthday.substring(0, 1);
+      } // end if/else
+
+      // grab last two digits of birthyear
+      username += birthday.substring(birthday.length() - 2);
+
+      // add domain name
+      username += "@anonymous.org";
 
       System.out.println("Here's your username, write it down because there's no way of getting it again.");
       System.out.println(username);
+
+      System.out.println("─────█─▄▀█──█▀▄─█─────");
+      System.out.println("────▐▌──────────▐▌────");
+      System.out.println("────█▌▀▄──▄▄──▄▀▐█────");
+      System.out.println("───▐██──▀▀──▀▀──██▌───");
+      System.out.println("──▄████▄──▐▌──▄████▄──");
 
   } // end main method
 
