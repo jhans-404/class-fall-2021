@@ -18,7 +18,7 @@ Primary organizational hub for those enrolled in this course.
   - Interactive textbook: https://csawesome.runestone.academy/runestone/books/published/csawesome/index.html
 
 ## Our work repos
-- [Alina]()
+- [Alina](https://github.com/fdrHighSchool/fall-2021-work-alinaa56)
 - [Carol](https://github.com/fdrHighSchool/fall-2021-work-carolfdrhs)
 - [Christopher](https://github.com/fdrHighSchool/fall-2021-work-ChrisPJava)
 - [Danny](https://github.com/fdrHighSchool/fall-2021-work-DannyNgLiu)
