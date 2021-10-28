@@ -12,8 +12,16 @@ public class CoordinatePlane {
     int x1 = getX(point1);
     System.out.println(x1);
 
+    System.out.println(x1 + 2);
   }// end main method
 
+  /*
+   * Name: getX
+   * Purpose: extract the x-value from a point
+              convert the String to an int
+   * Input: String coordinate pair (input from main)
+   * Return: the x-value (int)
+  */
   public static int getX(String point) {
     int commaPos = point.indexOf(",");
     // get the String version of x
