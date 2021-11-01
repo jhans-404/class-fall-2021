@@ -19,6 +19,7 @@ public class CoordinatePlane {
     int y2 = getY(point2);
 
     crowsDistance(x1, y1, x2, y2);
+    taxicabDistance(x1, y1, x2, y2);
   }// end main method
 
   /*
@@ -69,10 +70,14 @@ public class CoordinatePlane {
     // distance formula = sqrt[sum]
     double distance = Math.sqrt(sum);
 
-    System.out.println("The distance between the two points is: " + distance);
+    System.out.println("The crow's distance between the two points is: " + distance);
   }// end crowsDistance method
 
   public static void taxicabDistance(int x1, int y1, int x2, int y2) {
+    // distance forumla = |y2 - y1| + |x2 - x1|
+    int distance = Math.abs(y2 - y1) + Math.abs(x2 - x1);
+
+    System.out.println("The taxicab distance between the two points is: " + distance);
 
   }// end taxicabDistance method
 
