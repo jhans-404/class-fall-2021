@@ -37,6 +37,8 @@ public class CoordinatePlane {
 
     crowsDistance(x1, y1, x2, y2);
     taxicabDistance(x1, y1, x2, y2);
+
+    System.out.println(slope(x1, y1, x2, y2));
   }
 
   public static void area() {
@@ -117,5 +119,20 @@ public class CoordinatePlane {
     System.out.println("The taxicab distance between the two points is: " + distance);
 
   }// end taxicabDistance method
+
+  /*
+  N: slope
+  P: calculate the slope between two points
+  I: 2 points, already parsed (4 ints)
+  R: a double
+  */
+  public static double slope(int x1, int y1, int x2, int y2) {
+    // formula: (y2 - y1) / (x2 - x1)
+    if (x1 != x2) {
+      return (y2 - y1) / (x2 - x1);
+    }
+
+    return 0.0;
+  } // end slope method
 
 }// end class
