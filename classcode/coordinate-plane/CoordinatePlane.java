@@ -35,8 +35,8 @@ public class CoordinatePlane {
     int x2 = getX(point2);
     int y2 = getY(point2);
 
-    crowsDistance(x1, y1, x2, y2);
-    taxicabDistance(x1, y1, x2, y2);
+    System.out.println(crowsDistance(x1, y1, x2, y2));
+    System.out.println(taxicabDistance(x1, y1, x2, y2));
 
     System.out.println(slope(x1, y1, x2, y2));
   }
@@ -53,11 +53,54 @@ public class CoordinatePlane {
       square();
     } // end if statement
 
-
   } // end area method
 
   public static void square() {
     Scanner s = new Scanner(System.in);
+
+    System.out.println("Please go in clockwise order");
+    System.out.print("Enter the first point: ");
+
+    // get points and parse out x and y
+    // point 1
+    String point1 = s.nextLine();
+    int x1 = getX(point1);
+    int y1 = getY(point1);
+
+    // point 2
+    System.out.print("Enter the second point: ");
+    String point2 = s.nextLine();
+    int x2 = getX(point2);
+    int y2 = getY(point2);
+
+    // point 3
+    System.out.print("Enter the third point: ");
+    String point3 = s.nextLine();
+    int x3 = getX(point3);
+    int y3 = getY(point3);
+
+    // point 4
+    System.out.print("Enter the fourth point: ");
+    String point4 = s.nextLine();
+    int x4 = getX(point4);
+    int y4 = getY(point4);
+
+    // calculate 4 distances
+    double distance1 = crowsDistance(x1, y1, x2, y2);
+    double distance2 = crowsDistance(x2, y2, x3, y3);
+    double distance3 = crowsDistance(x3, y3, x4, y4);
+    double distance4 = crowsDistance(x4, y4, x1, y1);
+
+    // test if all sides are congruent
+    if (distance1 == distance2 && distance2 == distance3 && distance3 == distance4) {
+      System.out.println("Passes distance test");
+    } // end if statement
+    else {
+      System.out.println("Fails distance test");
+    } // end else statement
+
+    // test slopes next
+    System.out.println(slope(x1, y1, x2, y2));
 
   } // end square method
 
@@ -79,7 +122,7 @@ public class CoordinatePlane {
 
     // send the info back to main
     return x;
-  }
+  } // end getX method
 
   public static int getY(String point) {
     int commaPos = point.indexOf(",");
@@ -92,9 +135,9 @@ public class CoordinatePlane {
 
     // send the info back to main
     return y;
-  }
+  }  // end getY method
 
-  public static void crowsDistance(int x1, int y1, int x2, int y2) {
+  public static double crowsDistance(int x1, int y1, int x2, int y2) {
     // distance formula = sqrt[(y2 - y1)^2 + (x2 - x1)^2]
     int deltaX = x2 - x1;
     int deltaY = y2 - y1;
@@ -109,14 +152,14 @@ public class CoordinatePlane {
     // distance formula = sqrt[sum]
     double distance = Math.sqrt(sum);
 
-    System.out.println("The crow's distance between the two points is: " + distance);
+    return distance;
   }// end crowsDistance method
 
-  public static void taxicabDistance(int x1, int y1, int x2, int y2) {
+  public static double taxicabDistance(int x1, int y1, int x2, int y2) {
     // distance forumla = |y2 - y1| + |x2 - x1|
     int distance = Math.abs(y2 - y1) + Math.abs(x2 - x1);
 
-    System.out.println("The taxicab distance between the two points is: " + distance);
+    return distance;
 
   }// end taxicabDistance method
 
@@ -129,10 +172,10 @@ public class CoordinatePlane {
   public static double slope(int x1, int y1, int x2, int y2) {
     // formula: (y2 - y1) / (x2 - x1)
     if (x1 != x2) {
-      return (y2 - y1) / (x2 - x1);
-    }
+      return (double)(y2 - y1) / (x2 - x1);
+    }  // end if statement
 
-    return 0.0;
+    return Integer.MAX_VALUE;
   } // end slope method
 
 }// end class
