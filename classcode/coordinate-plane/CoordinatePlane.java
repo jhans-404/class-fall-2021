@@ -93,14 +93,21 @@ public class CoordinatePlane {
 
     // test if all sides are congruent
     if (distance1 == distance2 && distance2 == distance3 && distance3 == distance4) {
-      System.out.println("Passes distance test");
+      // calculate slopes
+      double slope1 = slope(x1, y1, x2, y2);
+      double slope2 = slope(x2, y2, x3, y3);
+
+      if ((slope1 * slope2 == -1) || (slope1 == Integer.MAX_VALUE && slope2 == 0)
+            || (slope1 == 0 && slope2 == Integer.MAX_VALUE)) {
+        System.out.println("Is a square");
+        drawSquare((int)distance1);
+      }
     } // end if statement
     else {
       System.out.println("Fails distance test");
     } // end else statement
 
-    // test slopes next
-    System.out.println(slope(x1, y1, x2, y2));
+
 
   } // end square method
 
@@ -177,5 +184,15 @@ public class CoordinatePlane {
 
     return Integer.MAX_VALUE;
   } // end slope method
+
+  public static void drawSquare(int d) {
+    for (int row = 0; row < d; row++) {
+      for(int col = 0; col < d; col++) {
+        System.out.print("*  ");
+      } // end of row
+      System.out.println();
+    } // end of square
+
+  }
 
 }// end class
