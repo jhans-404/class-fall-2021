@@ -1,5 +1,5 @@
 # Fraction Calculator
-### Due: 11/18/2020
+### Due: 11/19/2020
 
 ![](rhind-papyrus.jpg)
 
@@ -41,7 +41,7 @@ You must organize your code in the following way to receive credit for your proj
 ## Checkpoints:
 There will be 3 checkpoints to ensure that the calculator is on track for completion. They are required, and are worth a substantial part of your grade. You must submit them on time to receive full credit.
 
-* Checkpoint 1: Parsing one line of input **(Due by end of day, TUESDAY 11/03)**
+* Checkpoint 1: Parsing one line of input **(Due by beginning of class, WEDNESDAY 11/10)**
   * Your `main()` method creates a Scanner, reads one line of input, and passes that input to `produceAnswer`.
 
   * `produceAnswer` breaks up that line of input into three Strings: the first operand (fraction), the operator (+ - * /), and the second operand (fraction).  Each of these Strings should be stored in variables inside `produceAnswer`.  
@@ -51,7 +51,7 @@ There will be 3 checkpoints to ensure that the calculator is on track for comple
   * `main()` prints the result returned by `produceAnswer`.
 
 
-* Checkpoint 2: Multiple lines of input, parsing fractions **(Due by beginning of class, MONDAY 11/09)**
+* Checkpoint 2: Multiple lines of input, parsing fractions **(Due by beginning of class, MONDAY 11/15)**
   * Your `main()` method now accepts input from the user multiple times (until the user types “quit”).
 
   * For each line of input, main calls `produceAnswer()` and prints the returned result.
@@ -65,7 +65,7 @@ There will be 3 checkpoints to ensure that the calculator is on track for comple
 
     * `produceAnswer(“-32 - 27/21”)` returns "whole:0 numerator:27 denominator:21"
 
-* Checkpoint 3: Evaluation **(Due by end of day, FRIDAY 11/13)**
+* Checkpoint 3: Evaluation **(Due by end of day, WEDNESDAY 11/17)**
   * `produceAnswer` must now evaluate the formula it is given (performing addition, subtraction, multiplication, and division, based on the operator specified), and return the actual answer of that calculation (instead of just returning the second operand).
 
   * The answer need not be reduced, and need not be a mixed fraction.  But it must be correct.
