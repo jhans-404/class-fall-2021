@@ -7,10 +7,10 @@ public class CentralMeasures {
     // System.out.println(average(testGrades)); // 95
 
     // 100 random values in an array
-    int[] randomArray = new int[10];
+    int[] randomArray = new int[100];
 
-    // loop 10 times
-    for(int i = 0; i < 10; i++) {
+    // loop 100 times
+    for(int i = 0; i < 100; i++) {
       // choose a random value
       int value = (int)((Math.random() * 100) + 1);
 
