@@ -24,6 +24,8 @@ public class Exams {
     // display the first 5 grades
     System.out.println(Arrays.toString(sampleStudent));
     System.out.println(Arrays.toString(addGrade(sampleStudent)));
+
+    System.out.println(Arrays.toString(replaceGrade(sampleStudent)));
   } // end main method
 
 /*
@@ -58,10 +60,43 @@ public static int[] addGrade(int[] grades) {
 
 /*
 B) Write a method that takes the original set
-of 5 grades and replaces the lowest grade if
+of 5 grades and replaces the lowest grade IF
 the 6th grade is greater than it.
 If it is not, then the original 5 grades remain.
 */
+  public static int[] replaceGrade(int[] grades) {
+    // determine what the lowest value is and store its position
+    int currentLowest = 1000;
+    int lowestPos = 0;
+    int counter = 0;
+    for(int grade : grades) {
+      if(grade < currentLowest) {
+        currentLowest = grade;
+        lowestPos = counter;
+      }
+      counter++;
+    }
+    System.out.println(currentLowest);
+
+    // randomly choose a 6th grade
+    int sixthGrade = (int)(Math.random() * 46) + 55;
+    System.out.println("6th: " + sixthGrade);
+    // compare 6th grade to lowest
+    if(sixthGrade < currentLowest) {
+      return grades;
+    } else {
+        grades[lowestPos] = sixthGrade;
+    }
+
+    return grades;
+
+  } // end replaceGrade method
+
+
+
+
+
+
 
 
 } // end class
