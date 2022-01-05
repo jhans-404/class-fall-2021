@@ -76,6 +76,8 @@ If it is not, then the original 5 grades remain.
       }
       counter++;
     }
+    // what advantages does the for-each loop bring?
+    // what would this algorithm look like using a for loop?
     System.out.println(currentLowest);
 
     // randomly choose a 6th grade
@@ -91,12 +93,5 @@ If it is not, then the original 5 grades remain.
     return grades;
 
   } // end replaceGrade method
-
-
-
-
-
-
-
 
 } // end class
